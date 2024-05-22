@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="stylesheet" href="assets/css/style.css?_v=20240513155226">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20240513155226">
+    <link rel="stylesheet" href="assets/css/style.css?_v=20240522160955">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20240522160955">
     <title>Главная</title>
 </head>
 
@@ -16,7 +16,7 @@
     <div class="wrapper">
         <header class="header header_home">
             <div class="header__container container">
-                <a href="" class="header__logo">
+                <a href="" class="header__logo anim-items">
                     <img src="assets/images/logo.svg" alt="">
                     <img src="assets/images/logo-pink.svg" alt="">
                 </a>
@@ -75,11 +75,17 @@
 
         <main class="page page_home">
             <div class="intro">
-                <div class="intro__image">
-                    <img src="assets/images/intro.jpg" alt="">
+                <div class="intro__video">
+                    <video muted autoplay loop src="assets/videos/01.mp4" playsinline></video>
+                    <video muted autoplay loop src="assets/videos/02.mp4" playsinline></video>
                 </div>
                 <div class="intro__container container">
-                    <div class="intro__content">
+                    <div class="intro__background anim-items">
+                        <img src="assets/images/intro.png" alt="">
+                        <img src="assets/images/intro_mobile.png" alt="">
+                    </div>
+                    <div class="intro__content anim-items">
+
                         <div class="intro__text">
                             Your trustworthy partner
                             <br>
@@ -215,15 +221,7 @@
                                 </div>
                                 <div class="item-services__main">
                                     <div class="item-services__content content">
-                                        <ul>
-                                            <li>Analyze IT delivery process gaps, propose changes optimizations;</li>
-                                            <li>Increase the transparency of processes: setup process metrics, visualize work, describe clear rules;</li>
-                                            <li>Team as a Service</li>
-                                            <li>Set up feedback loops;</li>
-                                            <li>Analyze performance through metrics: build dashboards, identify problems/points of growth;</li>
-                                            <li>Propose management framework, adapt and implementing it;</li>
-                                            <li>Provide training to team leaders and their teams.</li>
-                                        </ul>
+                                        <p>Access strong expertise in UX/UI design, web and mobile applications, cloud solutions, AI/ML, crypto platforms, low-code</p>
                                     </div>
                                     <div class="item-services__image">
                                         <img src="assets/images/services/01.png" alt="">
@@ -423,7 +421,8 @@
                             <label class="contact-us__checkbox checkbox">
                                 <input class="checkbox__input" type="checkbox">
                                 <span class="checkbox__text">
-                                    <span>By clicking the Send button, you consent that Simple Product Hub Software Design L.L.C. can process your provided personal data for the purpose of assessing your request and providing you with appropriate responses. Before you consent, please view our Privacy Notice</span>
+                                    <span>By clicking the Send button, you consent that Simple Product Hub Software Design L.L.C. can process your provided personal data for the purpose of assessing your request and providing you with appropriate responses. Before you consent, <b>please view our Privacy Notice</b>
+                                    </span>
                                 </span>
                             </label>
                             <label class="contact-us__checkbox checkbox">
@@ -513,8 +512,8 @@
         </footer>
 
     </div>
-    <script src="assets/js/script.js?_v=20240513155226"></script>
-    <script src="assets/js/app.js?_v=20240513155226"></script>
+    <script src="assets/js/script.js?_v=20240522160955"></script>
+    <script src="assets/js/app.js?_v=20240522160955"></script>
 </body>
 
 </html>

@@ -193,7 +193,15 @@ svg {
 
 .content h2 {
   font-size: 26px;
-  margin-bottom: 10px;
+  margin-bottom: 22px;
+  line-height: 126.9230769231%;
+}
+
+.content strong {
+  font-size: 26px;
+  margin-bottom: 22px;
+  font-weight: 500;
+  display: inline-block;
   line-height: 126.9230769231%;
 }
 
@@ -246,6 +254,7 @@ svg {
 }
 
 .base-button {
+  font-size: 16px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -296,12 +305,23 @@ svg {
 }
 
 .header__logo {
+  top: 1px;
+  position: relative;
   -webkit-box-flex: 0;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   -ms-flex-item-align: end;
   align-self: flex-end;
   margin-right: 20px;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.header__logo.active {
+  opacity: 1;
+  visibility: visible;
 }
 
 .header__logo img {
@@ -432,6 +452,16 @@ svg {
   margin-bottom: 95px;
 }
 
+.services__image {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
 .services__image.hidden {
   opacity: 0;
   visibility: hidden;
@@ -450,6 +480,10 @@ svg {
 
 .services__item:first-child {
   padding-top: 0;
+}
+
+.services__item:first-child .item-services__image {
+  top: 0;
 }
 
 .services__item:last-child .item-services__image {
@@ -488,6 +522,9 @@ svg {
 }
 
 .item-services__button svg {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   width: 43px;
@@ -620,8 +657,12 @@ svg {
 }
 
 .about__text {
-  font-size: 26px;
-  line-height: 176.9230769231%;
+  font-size: 36px;
+  line-height: 127.7777777778%;
+}
+
+.values {
+  margin-bottom: 50px;
 }
 
 .values__title {
@@ -687,6 +728,7 @@ svg {
 }
 
 .intro {
+  overflow: hidden;
   position: relative;
   margin-bottom: 100px;
   min-height: 500px;
@@ -703,7 +745,7 @@ svg {
   padding-top: 120px;
 }
 
-.intro__image img {
+.intro__video video {
   z-index: 3;
   position: absolute;
   top: 0;
@@ -716,6 +758,22 @@ svg {
   object-position: center;
 }
 
+.intro__background {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 9;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.intro__background.active {
+  opacity: 1;
+  visibility: visible;
+}
+
 .intro__container {
   width: 100%;
 }
@@ -724,6 +782,19 @@ svg {
   position: relative;
   z-index: 10;
   padding-bottom: 78px;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease 0.3s;
+  transition: all 0.5s ease 0.3s;
+  visibility: hidden;
+  -webkit-transform: translate(0, 20px);
+  transform: translate(0, 20px);
+}
+
+.intro__content.active {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
 }
 
 .intro__text {
@@ -737,6 +808,10 @@ svg {
   width: 62px;
   height: 62px;
   color: #fff;
+}
+
+.page_home {
+  padding-top: 0 !important;
 }
 
 .contact-us {
@@ -872,12 +947,16 @@ svg {
 
 .checkbox svg {
   position: absolute;
-  top: -4px;
-  left: 3px;
-  color: #000;
+  top: 4px;
+  left: 5px;
+  color: #fff;
   z-index: 10;
   width: 15px;
   height: 15px;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .checkbox__text {
@@ -899,6 +978,11 @@ svg {
   font-size: 13px;
   color: #969696;
   line-height: 138.4615384615%;
+}
+
+.checkbox__text > span b {
+  color: #000;
+  font-weight: 500;
 }
 
 .checkbox__text:before {
@@ -924,7 +1008,7 @@ svg {
   height: 25px;
   left: 0;
   top: 0;
-  background-color: #CC27B0;
+  background: url("../images/icons/check.svg") 50% 50%/18px 18px no-repeat #CC27B0;
   -webkit-transform: scale(0);
   transform: scale(0);
   -webkit-transition: all 0.3s ease 0s;
@@ -1069,6 +1153,10 @@ svg {
     flex: 0 1 50%;
   }
 
+  .values {
+    margin-bottom: 45px;
+  }
+
   .item-values__image {
     max-width: 250px;
     max-height: 250px;
@@ -1080,6 +1168,10 @@ svg {
 
   .intro {
     height: 100vh;
+  }
+
+  .intro__video video:last-child {
+    display: none;
   }
 
   .contact-us__row {
@@ -1155,7 +1247,7 @@ svg {
 
   .item-services__image {
     position: absolute;
-    top: 0;
+    top: 60px;
     left: 0;
     -webkit-transform: translate(-100%, 0);
     transform: translate(-100%, 0);
@@ -1174,6 +1266,10 @@ svg {
 
   .projects__item {
     padding: 0 30px;
+  }
+
+  .values {
+    margin-bottom: 95px;
   }
 
   .contact-us__body {
@@ -1218,8 +1314,12 @@ svg {
 
 @media (min-width: 1230px) {
   .item-services__image {
-    -webkit-transform: translate(-150%, 0);
-    transform: translate(-150%, 0);
+    -webkit-transform: translate(-125%, 0);
+    transform: translate(-125%, 0);
+  }
+
+  .intro__background img:last-child {
+    display: none;
   }
 }
 
@@ -1268,6 +1368,14 @@ svg {
 
   .intro {
     margin-bottom: calc(40px + 60 * (100vw - 320px) / 910);
+  }
+
+  .intro__background {
+    left: -120px;
+  }
+
+  .intro__background img:first-child {
+    display: none;
   }
 
   .contact-us {
@@ -1320,6 +1428,10 @@ svg {
     font-size: 40px;
   }
 
+  .about__text {
+    font-size: 26px;
+  }
+
   .intro__text {
     font-size: 50px;
     margin-bottom: 10px;
@@ -1367,6 +1479,10 @@ svg {
 
 @media (max-width: 767.98px) {
   .content h2 {
+    font-size: 22px;
+  }
+
+  .content strong {
     font-size: 22px;
   }
 
@@ -1495,7 +1611,7 @@ svg {
     position: absolute;
     right: 0;
     top: calc(50% - 1px);
-    border: 1.5px solid #1D1D1D;
+    border: 1px solid #1D1D1D;
     width: 100%;
   }
 
@@ -1673,6 +1789,18 @@ svg {
     font-size: 16px;
   }
 
+  .intro {
+    min-height: 100vh;
+  }
+
+  .intro__video video:first-child {
+    display: none;
+  }
+
+  .intro__background {
+    left: -250px;
+  }
+
   .intro__content {
     padding-bottom: 25px;
   }
@@ -1698,6 +1826,11 @@ svg {
 @media (max-width: 480.98px) {
   .about__image img {
     height: 230px;
+  }
+
+  .intro__background {
+    left: -350px;
+    top: 100px;
   }
 }
 
@@ -1743,6 +1876,10 @@ svg {
 }
 
 @media (any-hover: hover) {
+  .more:hover span {
+    text-decoration: underline;
+  }
+
   .base-button:hover {
     background: #33635D;
   }
