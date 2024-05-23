@@ -486,10 +486,6 @@ svg {
   top: 0;
 }
 
-.services__item:last-child .item-services__image {
-  top: -20px;
-}
-
 .item-services {
   position: relative;
 }
@@ -554,6 +550,8 @@ svg {
 }
 
 .projects {
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
   margin-bottom: 200px;
 }
 
@@ -756,6 +754,17 @@ svg {
   object-fit: cover;
   -o-object-position: center;
   object-position: center;
+}
+
+.intro__image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 9;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .intro__background {
@@ -1258,6 +1267,10 @@ svg {
     height: 430px;
     -o-object-fit: contain;
     object-fit: contain;
+  }
+
+  .projects.offset {
+    padding-top: 220px;
   }
 
   .projects__items {
@@ -1829,8 +1842,8 @@ svg {
   }
 
   .intro__background {
-    left: -350px;
-    top: 100px;
+    left: -250px;
+    bottom: 0;
   }
 }
 
@@ -1866,6 +1879,10 @@ svg {
 }
 
 @media (min-width: 991.98px) and (max-width: 1230px) {
+  .projects.offset {
+    padding-top: calc(80px + 140 * (100vw - 320px) / 910);
+  }
+
   .contact-us__title {
     width: calc(100px + 260 * (100vw - 320px) / 910);
   }

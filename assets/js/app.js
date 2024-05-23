@@ -150,6 +150,8 @@ window.addEventListener('DOMContentLoaded', function() {
 
     //
     //
+
+    const projectsBlock = document.querySelector('.projects')
     window.addEventListener('click', function(e) {
         if (e.target.closest('.item-services__button')) {
             const isActive = e.target.closest('.item-services__button').classList.contains('active')
@@ -160,6 +162,16 @@ window.addEventListener('DOMContentLoaded', function() {
                 document.querySelector('.services__image').classList.remove('hidden')
 
             }
+        }
+        if (!lock &&  e.target.closest('.item-services__button_last')) {
+            projectsBlock.classList.toggle('offset')
+            lock = true
+            setTimeout(() => {
+                lock = false
+            }, 500)
+        }
+        if (!lock && e.target.closest('.item-services__button') && projectsBlock && projectsBlock.classList.contains('offset') && !e.target.closest('.item-services__button_last')) {
+            projectsBlock.classList.remove('offset')
         }
     })
 
