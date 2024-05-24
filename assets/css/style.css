@@ -1267,6 +1267,14 @@ svg {
   margin-bottom: 200px;
 }
 
+.content-project p {
+  margin-bottom: 10px;
+}
+
+.content-project ul {
+  margin-bottom: 10px;
+}
+
 .content-project__item {
   margin-bottom: 32px;
 }
