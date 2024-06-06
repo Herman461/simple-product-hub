@@ -596,16 +596,6 @@ svg {
   justify-content: center;
 }
 
-.item-projects {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
 .item-projects__image {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 auto;
@@ -674,7 +664,7 @@ svg {
 
 .about__text {
   font-size: 26px;
-  line-height: 127.7777777778%;
+  line-height: 146.1538461538%;
 }
 
 .values {
@@ -1702,24 +1692,37 @@ svg {
 }
 
 @media (max-width: 991.98px) {
-  .footer__main {
+  .footer__body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
 
   .footer__main {
-    margin-bottom: 45px;
+    -webkit-box-ordinal-group: 4;
+    -ms-flex-order: 3;
+    order: 3;
   }
 
   .footer__logo {
     margin-right: 40px;
+  }
+
+  .footer__contacts {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+
+  .footer__menu {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+    margin-bottom: 40px;
   }
 
   .services__image {
